@@ -8,17 +8,37 @@
   </head>
   <body>
     <div class="container">
-      <button class="reset" onclick="resetGrid()">Reset</button>
-      <button class="eraser" onclick="setPointerToEraser()">Eraser</button>
-      <div>
-        <input id="grid-size-slider" type="range" value="8" min="1" max="128" />
-        <button class="set-grid-size" onclick="setNewGridSize()">
-          Set grid size
+      <div class="side-container">
+        <h1>Etch-a-sketch</h1>
+        <button class="rainbow-button" onclick="resetGrid()">Reset</button>
+        <button class="rainbow-button" onclick="setPointerToEraser()">
+          Eraser
         </button>
+        <button class="rainbow-button" onclick="setPointerToRainbow()">
+          Rainbow
+        </button>
+        <div class="slider-container">
+          <p>Grid size:</p>
+          <input
+            type="range"
+            min="1"
+            max="16"
+            value="8"
+            class="slider-pic"
+            id="grid-size-slider"
+          />
+          <p>
+            <output class="slider-value"></output>x<output
+              class="slider-value"
+            ></output>
+          </p>
+        </div>
       </div>
-
       <div id="grid" class="grid"></div>
     </div>
-    <script src="main.js"></script>
+
+    <div id="particles-js"></div>
+    <script type="text/javascript" src="particles.js"></script>
+    <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
